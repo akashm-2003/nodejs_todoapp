@@ -18,8 +18,8 @@ app.use(
     origin: [process.env.FRONTEND_URL],
     // origin: "https://www.akashtodoapp.com",
     // This means allow to use cookies
-    credentials: true,
     methods: ["GET", "POST", "PUT", "DELETE"],
+    credentials: true,
   })
 );
 // This should always be last
