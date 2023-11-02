@@ -4,6 +4,12 @@ You can use like this in package.json
     "dev": "set NODE_ENV=development&&nodemon server.js"
   },
 
+TO solve npm version lesser
+"engine": {
+    "node": ">=18.16.0"
+  },
+
+  
 npm i express mongoose dotenv
 
 cors it is a middleware that allows us to connect to our backend from a different domain name or port number
