@@ -5,11 +5,11 @@ You can use like this in package.json
   },
 
 TO solve npm version lesser
-"engine": {
+"engines": {
     "node": ">=18.16.0"
   },
 
-  
+
 npm i express mongoose dotenv
 
 cors it is a middleware that allows us to connect to our backend from a different domain name or port number
