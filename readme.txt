@@ -1,3 +1,9 @@
+You can use like this in package.json
+"scripts": {
+    "start": "set NODE_ENV=production&&node server.js",
+    "dev": "set NODE_ENV=development&&nodemon server.js"
+  },
+
 npm i express mongoose dotenv
 
 cors it is a middleware that allows us to connect to our backend from a different domain name or port number
