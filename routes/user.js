@@ -10,8 +10,6 @@ router.get("/", (req, res) => {
 //By query Method
 router.get("/all",getAllUser);
 
-
-
 //Add User
 router.post("/register", postAddUser);
 

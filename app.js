@@ -15,7 +15,7 @@ app.use(express.json());
 app.use(
   cors({
     // origin is used which frontend website can access the api
-    origin: "*",
+    origin: [process.env.FRONTEND_URL],
     // origin: "https://www.akashtodoapp.com",
     // This means allow to use cookies
     credentials: true,
