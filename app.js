@@ -5,21 +5,22 @@ import express from "express";
 import { errorMiddleware } from "./middlewares/error.js";
 import taskRouter from "./routes/task.js";
 import userRouter from "./routes/user.js";
+import bodyParser from "body-parser";
 config({
   path: "./config.env",
 });
 export const app = express();
 app.use(cookieParser());
 app.use(express.json());
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json());
+
 //cors - Cross Origin Resource Sharing
 app.use(
   cors({
-    // origin is used which frontend website can access the api
-    origin: [process.env.FRONTEND_URL],
-    // origin: "https://www.akashtodoapp.com",
-    // This means allow to use cookies
-    methods: ["GET", "POST", "PUT", "DELETE"],
     credentials: true,
+    origin: [process.env.FRONTEND_URL],
+    methods: ["GET", "POST", "PUT", "DELETE"],
   })
 );
 // This should always be last

@@ -12,6 +12,7 @@ export const newTask = async (req, res) => {
     });
     res.status(201).json({
       success: true,
+      message: "Task Created",
       task,
     });
   } catch (err) {
@@ -30,6 +31,7 @@ export const allTask = async (req, res) => {
     const task = await Task.find({ user: id });
     res.status(201).json({
       success: true,
+      message: "All Task",
       task,
     });
   } catch (err) {
